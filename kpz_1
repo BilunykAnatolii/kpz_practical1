@@ -1,0 +1,178 @@
+# Завдання 1
+
+# numbers = []
+
+# for i in range(3):
+#     num = float(input(f"Введіть {i+1}-е число: "))
+#     numbers.append(num)
+
+# for i in range(len(numbers)):
+#     if numbers[i] >= 0:
+#         numbers[i] = numbers[i] ** 2
+#     else:
+#         numbers[i] = numbers[i] ** 4
+
+# print("Результати:")
+# for i in range(len(numbers)):
+#     print(f"{i+1}-е число:", numbers[i])
+
+# Завдання 2
+
+# x1 = float(input("Введіть координату x для точки A: "))
+# y1 = float(input("Введіть координату y для точки A: "))
+# x2 = float(input("Введіть координату x для точки B: "))
+# y2 = float(input("Введіть координату y для точки B: "))
+
+# distance_to_origin_A = (x1 ** 2 + y1 ** 2) ** 0.5
+# distance_to_origin_B = (x2 ** 2 + y2 ** 2) ** 0.5
+
+# if distance_to_origin_A < distance_to_origin_B:
+#     print("Точка A знаходиться ближче до початку координат.")
+# elif distance_to_origin_B < distance_to_origin_A:
+#     print("Точка B знаходиться ближче до початку координат.")
+# else:
+#     print("Точки A і B знаходяться на однаковій відстані від початку координат.")
+
+# Завдання 3
+    
+# angle1 = float(input("Введіть перший кут трикутника: "))
+# angle2 = float(input("Введіть другий кут трикутника: "))
+
+# angle3 = 180 - angle1 - angle2
+
+# if angle1 + angle2 + angle3 == 180 and angle1 > 0 and angle2 > 0 and angle3 > 0:
+#     print("Такий трикутник існує.")
+#     if angle1 == 90 or angle2 == 90 or angle3 == 90:
+#         print("Трикутник є прямокутним.")
+#     else:
+#         print("Трикутник не є прямокутним.")
+# else:
+#     print("Такий трикутник не існує.")
+
+# Завдання 4
+
+# x = float(input("Введіть число x: "))
+# y = float(input("Введіть число y: "))
+
+# if x == y:
+#     print("Числа x та y не можуть бути однаковими.")
+# else:
+#     if x < y:
+#         x = (x + y) / 2
+#         y = 2 * x
+#     else:
+#         y = (x + y) / 2
+#         x = 2 * y
+
+#     print("Після обробки:")
+#     print("x =", x)
+#     print("y =", y)
+
+# Завдання 5
+
+# x = float(input("Введіть координату x для точки A: "))
+# y = float(input("Введіть координату y для точки A: "))
+
+# if x > 0 and y > 0:
+#     print("Точка A знаходиться у першому квадранті.")
+# elif x < 0 and y > 0:
+#     print("Точка A знаходиться у другому квадранті.")
+# elif x < 0 and y < 0:
+#     print("Точка A знаходиться у третьому квадранті.")
+# elif x > 0 and y < 0:
+#     print("Точка A знаходиться у четвертому квадранті.")
+# elif x == 0 and y != 0:
+#     print("Точка A лежить на вісі Y.")
+# elif x != 0 and y == 0:
+#     print("Точка A лежить на вісі X.")
+# else:
+#     print("Точка A знаходиться в початку координат.")
+
+# Завдання 6
+
+# a = int(input("Введіть ціле число a: "))
+# b = int(input("Введіть ціле число b: "))
+
+# if a != b:
+#     max_number = max(a, b)
+#     a = max_number
+#     b = a
+# else:
+#     a = 0
+#     b = 0
+
+# print("Результат:")
+# print("a =", a)
+# print("b =", b)
+
+# Завдання 7
+
+# a = int(input("Введіть число a: "))
+# b = int(input("Введіть число b: "))
+# c = int(input("Введіть число c: "))
+
+# count = 0
+
+# if a < 0:
+#     count += 1
+# if b < 0:
+#     count += 1
+# if c < 0:
+#     count += 1
+
+# print("Кількість негативних чисел: ", count)
+
+# Завдання 8
+
+# a = int(input("Введіть число a: "))
+# b = int(input("Введіть число b: "))
+# c = int(input("Введіть число c: "))
+
+# count = 0
+
+# if a > 0:
+#     count += 1
+# if b > 0:
+#     count += 1
+# if c > 0:
+#     count += 1
+
+# print("Кількість додатних чисел: ", count)
+
+# Завдання 9
+
+# a = float(input("Введіть число a: "))
+# b = float(input("Введіть число b: "))
+# c = float(input("Введіть число c: "))
+
+# count = 0
+
+# if a % 1 == 0:
+#     count += 1
+# if b % 1 == 0:
+#     count += 1
+# if c % 1 == 0:
+#     count += 1
+
+# print("Кількість цілих чисел: ", count)
+
+# Завдання 10
+
+a = int(input("Введіть число a: "))
+b = int(input("Введіть число b: "))
+c = int(input("Введіть число c: "))
+k = int(input("Введіть число k: "))
+
+divisors = []
+
+if a % k == 0:
+    divisors.append("a")
+if b % k == 0:
+    divisors.append("b")
+if c % k == 0:
+    divisors.append("c")
+
+if divisors:
+    print(f"Число {k} є дільником чисел: {', '.join(divisors)}")
+else:
+    print(f"Число {k} не є дільником жодного з чисел")
